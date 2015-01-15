@@ -33,11 +33,11 @@ class Master(Script):
     env.set_params(params)
 
   def stop(self, env):
-    Execute('service ipa start')
+    Execute('service ipa stop')
       
   def start(self, env):
     import params
-    Execute('service ipa stop')
+    Execute('service ipa start')
 
   def status(self, env):
     Execute('service ipa status')
