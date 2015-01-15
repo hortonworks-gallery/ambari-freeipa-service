@@ -13,5 +13,4 @@ server_realm = config['configurations']['freeipa-config']['freeipa.server.realm'
 dns_setup = config['configurations']['freeipa-config']['freeipa.server.dns.setup']
 dns_forwarder = config['configurations']['freeipa-config']['freeipa.server.dns.forwarder']
 
-</configuration>
 

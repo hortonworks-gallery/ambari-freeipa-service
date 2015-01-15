@@ -15,7 +15,7 @@ class Master(Script):
     cmd = cmd + ' --realm=' + params.server_realm
     cmd = cmd + ' --ds-password=' + params.ds_password
     cmd = cmd + ' --master-password=' + params.master_password
-    cmd = cmd + ' --admin-password=' + params.admin-password
+    cmd = cmd + ' --admin-password=' + params.admin_password
     cmd = cmd + ' --realm=' + params.server_realm
     if params.dns_setup:
         cmd = cmd + ' --setup-dns'

@@ -37,12 +37,12 @@ On bottom left -> Actions -> Add service -> check FreeIPA server -> Next -> Next
   - Delete the service
   
     ```
-    curl -u admin:admin -i -H 'X-Requested-By: ambari' -X DELETE http://sandbox.hortonworks.com:8080/api/v1/clusters/Sandbox/services/VNC
+    curl -u admin:admin -i -H 'X-Requested-By: ambari' -X DELETE http://sandbox.hortonworks.com:8080/api/v1/clusters/Sandbox/services/FreeIPAserver
     ```
   - Remove artifacts 
   
     ```
-    /var/lib/ambari-server/resources/stacks/HDP/2.2/services/vnc-stack/remove.sh
+    /var/lib/ambari-server/resources/stacks/HDP/2.2/services/freeipa-stack/remove.sh
     ```
 
 #### Import users
