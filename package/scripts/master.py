@@ -9,20 +9,20 @@ class Master(Script):
     self.configure(env)
     import params
 
-	cmd = 'ipa-server-install'
-	cmd = cmd + ' --hostname=' + params.server_hostname
-	cmd = cmd + ' --domain=' + params.server_domain
-	cmd = cmd + ' --realm=' + params.server_realm
-	cmd = cmd + ' --ds-password=' + params.ds_password
-	cmd = cmd + ' --master-password=' + params.master_password
-	cmd = cmd + ' --admin-password=' + params.admin-password
-	cmd = cmd + ' --realm=' + params.server_realm
-	if params.dns_setup:
-		cmd = cmd + ' --setup-dns'
-		cmd = cmd + ' --forwarder=' + params.dns_forwarder
-	cmd = cmd + ' --unattended'
-	
-	#ipa-server-install --hostname=sandbox.hortonworks.com --domain=hortonworks.com --realm=HORTONWORKS.COM --ds-password=hortonworks --master-password=hortonworks --admin-password=hortonworks --setup-dns --forwarder=8.8.8.8 --unattended					
+    cmd = 'ipa-server-install'
+    cmd = cmd + ' --hostname=' + params.server_hostname
+    cmd = cmd + ' --domain=' + params.server_domain
+    cmd = cmd + ' --realm=' + params.server_realm
+    cmd = cmd + ' --ds-password=' + params.ds_password
+    cmd = cmd + ' --master-password=' + params.master_password
+    cmd = cmd + ' --admin-password=' + params.admin-password
+    cmd = cmd + ' --realm=' + params.server_realm
+    if params.dns_setup:
+        cmd = cmd + ' --setup-dns'
+        cmd = cmd + ' --forwarder=' + params.dns_forwarder
+    cmd = cmd + ' --unattended'
+    
+    #ipa-server-install --hostname=sandbox.hortonworks.com --domain=hortonworks.com --realm=HORTONWORKS.COM --ds-password=hortonworks --master-password=hortonworks --admin-password=hortonworks --setup-dns --forwarder=8.8.8.8 --unattended
     Execute(cmd)
     
     #echo hortonworks | kinit admin
