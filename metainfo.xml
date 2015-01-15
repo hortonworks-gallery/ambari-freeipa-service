@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>FreeIPAserver</name>
+            <displayName>FreeIPA server</displayName>
+            <comment>FreeIPA server</comment>
+            <version>1.0.0</version>
+            <components>
+                <component>
+                  <name>FREEIPA_MASTER</name>
+                  <displayName>FreeIPA server</displayName>
+                  <category>MASTER</category>
+                  <cardinality>1</cardinality>
+                  <commandScript>
+                    <script>scripts/master.py</script>
+                    <scriptType>PYTHON</scriptType>
+                    <timeout>5000</timeout>
+                  </commandScript>
+                </component>
+            </components>
+            <osSpecifics>
+              <osSpecific>
+                <osFamily>redhat6</osFamily>
+                <packages>
+                  <package><name>*ipa-server</name></package>
+                  <package><name>bind</name></package>
+                  <package><name>bind-dyndb-ldap</name></package>                  
+                </packages>
+              </osSpecific>
+            </osSpecifics>
+      	    <configuration-dependencies>
+        	<config-type>freeipa-config</config-type>
+      	    </configuration-dependencies>
+            <restartRequiredAfterChange>false</restartRequiredAfterChange>
+        </service>
+    </services>
+</metainfo>

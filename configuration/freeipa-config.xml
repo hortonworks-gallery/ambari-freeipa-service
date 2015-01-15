@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+ 
+<configuration>
+ <property require-input="true">
+    <name>freeipa.server.ds.password</name>
+    <value></value>
+    <property-type>PASSWORD</property-type>
+    <description>admin password</description>
+ </property>
+  <property require-input="true">
+    <name>freeipa.server.admin.password</name>
+    <value></value>
+    <property-type>PASSWORD</property-type>
+    <description>admin user kerberos password</description>
+ </property> 
+ <property require-input="true">
+    <name>freeipa.server.master.password</name>
+    <value></value>
+    <property-type>PASSWORD</property-type>
+    <description>kerberos master password</description>
+ </property>
+ 
+  <property>
+    <name>freeipa.server.hostname</name>
+    <value>sandbox.hortonworks.com</value>
+    <description>fully qualified name of server</description>
+ </property>
+ 
+  <property>
+    <name>freeipa.server.domain</name>
+    <value>hortonworks.com</value>
+    <description>domain name</description>
+ </property>
+ 
+ <property>
+    <name>freeipa.server.realm</name>
+    <value>HORTONWORKS.COM</value>
+    <description>realm name</description>
+ </property>
+
+  <property>
+    <name>freeipa.server.dns.setup</name>
+    <value>true</value>
+    <description>DNS option: configure bind with our zone</description>
+ </property>
+  
+  <property>
+    <name>freeipa.server.dns.forwarder</name>
+    <value>8.8.8.8</value>
+    <description>DNS option: DNS forwarder</description>
+ </property>
+ 
+</configuration>
+
