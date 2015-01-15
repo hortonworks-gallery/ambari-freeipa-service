@@ -26,7 +26,7 @@ class Master(Script):
     Execute(cmd)
     
     #echo hortonworks | kinit admin
-    Execute('echo ' + params.admin-password + ' | kinit admin')
+    Execute('echo ' + params.admin_password + ' | kinit admin')
 
   def configure(self, env):
     import params
