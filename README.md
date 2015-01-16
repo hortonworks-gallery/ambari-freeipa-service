@@ -34,11 +34,6 @@ On bottom left -> Actions -> Add service -> check FreeIPA server -> Next -> Next
 - You can see the parameters you configured under 'Configs' tab
 ![Image](../master/screenshots/screenshot-freeipa-stack-config.png?raw=true)
 
-- You can browse FreeIPA's LDAP using JXplorer 
-![Image](../master/screenshots/screenshot-browse-LDAP.png?raw=true)
-
-- The FreeIPA webUI login page should come up at the below link, but for some reason logging in as admin does not seem to work (even after configuring the Firefox browser): https://sandbox.hortonworks.com/ipa/ui/
-
 - To remove the FreeIPA service: 
   - Stop the service via Ambari
   - Delete the service
@@ -102,5 +97,12 @@ ipa passwd xapolicymgr < tmp.txt
 ipa passwd rangeradmin < tmp.txt
 rm -f tmp.txt
 ```
+
+#### Browse users
+
+- You can browse the groups/users in FreeIPA using any LDAP browser like JXplorer 
+![Image](../master/screenshots/screenshot-browse-LDAP.png?raw=true)
+
+- The FreeIPA webUI login page should come up at the below link, but for some reason logging in as admin does not seem to work (even after configuring the Firefox browser): https://sandbox.hortonworks.com/ipa/ui/
 
 
