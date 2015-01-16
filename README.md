@@ -104,5 +104,5 @@ rm -f tmp.txt
 ![Image](../master/screenshots/screenshot-browse-LDAP.png?raw=true)
 
 - The FreeIPA webUI login page should come up at the below link, but for some reason logging in as admin does not seem to work (even after configuring the Firefox browser): https://sandbox.hortonworks.com/ipa/ui/
-
+![Image](../master/screenshots/screenshot-error.png?raw=true)
 
