@@ -28,9 +28,17 @@ On bottom left -> Actions -> Add service -> check FreeIPA server -> Next -> Next
 - On successful deployment you will see the FreeIPA service as part of Ambari stack and will be able to start/stop the service from here:
 ![Image](../master/screenshots/screenshot-vnc-stack.png?raw=true)
 
-- When you've completed the install process, FreeIPA server will be working
-![Image](../master/screenshots/screenshot-vnc-clientsetup.png?raw=true)
+- When you've completed the install process, FreeIPA server will appear in Ambari 
+![Image](../master/screenshots/screenshot-freeipa-stack.png?raw=true)
 
+![Image](../master/screenshots/screenshot-freeipa-stack-config.png?raw=true)
+
+- You can browse FreeIPA's LDAP using JXplorer 
+![Image](../master/screenshots/screenshot-browse-LDAP.png?raw=true)
+
+- The FreeIPA webUI login page should come up at the below, but for some reason logging in as admin does not seem to work (even after configuring the Firefox browser)
+
+https://sandbox.hortonworks.com/ipa/ui/
 
 - To remove the FreeIPA service: 
   - Stop the service via Ambari
@@ -96,13 +104,4 @@ ipa passwd rangeradmin < tmp.txt
 rm -f tmp.txt
 ```
 
-#### Screenshots
 
-- Ambari stack (status view)
-![Image](../master/screenshots/screenshot-freeipa-stack.png?raw=true)
-
-- Ambari stack (config view)
-![Image](../master/screenshots/screenshot-freeipa-stack-config?raw=true)
-
-- Browse FreeIPA's LDAP using JXplorer
-![Image](../master/screenshots/screenshot-browse-LDAP.png?raw=true)
