@@ -34,6 +34,24 @@ On bottom left -> Actions -> Add service -> check FreeIPA server -> Next -> Next
 - You can see the parameters you configured under 'Configs' tab
 ![Image](../master/screenshots/screenshot-freeipa-stack-config.png?raw=true)
 
+- One benefit to wrapping the component in Ambari service is that you can now monitor/manage this service remotely via REST API
+```
+export SERVICE=FreeIPAserver
+export PASSWORD=admin
+export AMBARI_HOST=sandbox.hortonworks.com
+export CLUSTER=Sandbox
+
+#get service status
+curl -u admin:$PASSWORD -i -H 'X-Requested-By: ambari' -X GET http://$AMBARI_HOST:8080/api/v1/clusters/$CLUSTER/services/$SERVICE
+
+#start service
+curl -u admin:$PASSWORD -i -H 'X-Requested-By: ambari' -X PUT -d '{"RequestInfo": {"context" :"Start $SERVICE via REST"}, "Body": {"ServiceInfo": {"state": "STARTED"}}}' http://$AMBARI_HOST:8080/api/v1/clusters/$CLUSTER/services/$SERVICE
+
+#stop service
+curl -u admin:$PASSWORD -i -H 'X-Requested-By: ambari' -X PUT -d '{"RequestInfo": {"context" :"Stop $SERVICE via REST"}, "Body": {"ServiceInfo": {"state": "INSTALLED"}}}' http://$AMBARI_HOST:8080/api/v1/clusters/$CLUSTER/services/$SERVICE
+```
+
+
 - To remove the FreeIPA service: 
   - Stop the service via Ambari
   - Delete the service
@@ -105,4 +123,5 @@ rm -f tmp.txt
 
 - The FreeIPA webUI login page should come up at the below link, but for some reason logging in as admin does not seem to work (even after configuring the Firefox browser): https://sandbox.hortonworks.com/ipa/ui/
 ![Image](../master/screenshots/screenshot-error.png?raw=true)
+
 
