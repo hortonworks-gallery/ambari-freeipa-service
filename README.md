@@ -120,6 +120,7 @@ ipa passwd rangeradmin < tmp.txt
 rm -f tmp.txt
 ```
 
+
 #### Browse users
 
 - You can browse the groups/users in FreeIPA using any LDAP browser like JXplorer 
