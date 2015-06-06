@@ -1,5 +1,9 @@
-#### An Ambari Stack for FreeIPA
-Ambari stack for easily installing and managing FreeIPA on HDP cluster
+#### An Ambari Service for FreeIPA
+Ambari service for easily installing and managing FreeIPA on HDP cluster
+
+Author: [Ali Bajwa](https://www.linkedin.com/in/aliabajwa)
+
+##### Setup
 
 - Download HDP 2.2 sandbox VM image (Sandbox_HDP_2.2_VMware.ova) from [Hortonworks website](http://hortonworks.com/products/hortonworks-sandbox/)
 - Import Sandbox_HDP_2.2_VMware.ova into VMWare and set the VM memory size to 8GB
@@ -14,10 +18,10 @@ ssh root@sandbox.hortonworks.com
 /root/start_ambari.sh
 ```
 
-- To deploy the VNC stack, run below
+- To deploy the VNC service, run below
 ```
 cd /var/lib/ambari-server/resources/stacks/HDP/2.2/services
-git clone https://github.com/abajwa-hw/freeipa-stack.git   
+git clone https://github.com/abajwa-hw/freeipa-service.git   
 sudo service ambari restart
 ```
 - Then you can click on 'Add Service' from the 'Actions' dropdown menu in the bottom left of the Ambari dashboard:
@@ -25,7 +29,7 @@ sudo service ambari restart
 On bottom left -> Actions -> Add service -> check FreeIPA server -> Next -> Next -> Enter password -> Next -> Deploy
 ![Image](../master/screenshots/screenshot-vnc-config.png?raw=true)
 
-- On successful deployment you will see the FreeIPA service as part of Ambari stack and will be able to start/stop the service from here:
+- On successful deployment you will see the FreeIPA service as part of Ambari service and will be able to start/stop the service from here:
 ![Image](../master/screenshots/screenshot-vnc-stack.png?raw=true)
 
 - When you've completed the install process, FreeIPA server will appear in Ambari 
