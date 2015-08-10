@@ -20,9 +20,14 @@ ssh root@sandbox.hortonworks.com
 
 - To deploy the VNC service, run below
 ```
-cd /var/lib/ambari-server/resources/stacks/HDP/2.2/services
-git clone https://github.com/hortonworks-gallery/ambari-freeipa-service.git   
+VERSION=`hdp-select status hadoop-client | sed 's/hadoop-client - \([0-9]\.[0-9]\).*/\1/'`
+sudo git clone https://github.com/hortonworks-gallery/ambari-zeppelin-service.git   /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/ambari-freeipa-service   
+
+#sandbox
 sudo service ambari restart
+
+#non sandbox
+sudo service ambari-server restart
 ```
 - Then you can click on 'Add Service' from the 'Actions' dropdown menu in the bottom left of the Ambari dashboard:
 
