@@ -3,7 +3,7 @@
     <schemaVersion>2.0</schemaVersion>
     <services>
         <service>
-            <name>FreeIPAserver</name>
+            <name>FREEIPA</name>
             <displayName>FreeIPA server</displayName>
             <comment>FreeIPA server</comment>
             <version>1.0.0</version>

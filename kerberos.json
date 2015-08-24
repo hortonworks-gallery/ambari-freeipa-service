@@ -1,0 +1,17 @@
+{
+  "services": [
+    {
+      "name": "FREEIPA",
+      "identities": [
+        {
+          "name": "/smokeuser"
+        }
+      ],
+      "components": [
+        {
+          "name": "FREEIPA_MASTER"
+        }
+      ]
+    }
+  ]
+}
