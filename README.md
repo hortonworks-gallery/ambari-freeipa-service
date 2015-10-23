@@ -3,6 +3,8 @@ Ambari service for easily installing and managing FreeIPA on HDP cluster
 
 Author: [Ali Bajwa](https://www.linkedin.com/in/aliabajwa)
 
+## This is not for production use (demo only!)
+
 ##### Setup
 
 - Download HDP 2.2 sandbox VM image (Sandbox_HDP_2.2_VMware.ova) from [Hortonworks website](http://hortonworks.com/products/hortonworks-sandbox/)
