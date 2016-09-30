@@ -34,6 +34,7 @@
                 <osFamily>redhat7</osFamily>
                 <packages>
                   <package><name>*ipa-server</name></package>
+                  <package><name>ipa-server-dns</name></package>
                   <package><name>bind</name></package>
                   <package><name>bind-dyndb-ldap</name></package>                  
                 </packages>
