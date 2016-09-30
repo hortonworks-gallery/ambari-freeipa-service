@@ -33,11 +33,11 @@ class Master(Script):
     env.set_params(params)
 
   def stop(self, env):
-    Execute('service ipa stop')
+    Execute('service ipa stop >> /var/log/freeipa-setup.log')
       
   def start(self, env):
     import params
-    Execute('service ipa start')
+    Execute('service ipa start >> /var/log/freeipa-setup.log')
 
   def status(self, env):
     Execute('service ipa status')
