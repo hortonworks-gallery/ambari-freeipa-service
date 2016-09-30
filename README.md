@@ -27,7 +27,7 @@ ssh root@sandbox.hortonworks.com
 - To deploy the VNC service, run below
 ```
 VERSION=`hdp-select status hadoop-client | sed 's/hadoop-client - \([0-9]\.[0-9]\).*/\1/'`
-sudo git clone https://github.com/hortonworks-gallery/ambari-freeipa-service.git   /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/ambari-freeipa-service   
+sudo git clone https://github.com/hortonworks-gallery/ambari-freeipa-service.git   /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/FREEIPA-DEMO   
 
 #sandbox
 sudo service ambari restart

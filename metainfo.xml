@@ -5,7 +5,7 @@
         <service>
             <name>FREEIPA</name>
             <displayName>FreeIPA server</displayName>
-            <comment>FreeIPA server</comment>
+            <comment>FreeIPA server. This service is for &lt;b&gt;Demo purposes only&lt;/b&gt; and is &lt;b&gt;not officially supported&lt;/b&gt;</comment>
             <version>1.0.0</version>
             <components>
                 <component>
