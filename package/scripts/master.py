@@ -19,8 +19,8 @@ class Master(Script):
     if params.dns_setup:
         cmd = cmd + ' --setup-dns'
         cmd = cmd + ' --forwarder=' + params.dns_forwarder
-    cmd = cmd + ' --unattended'
-    cmd = cmd + ' >> /var/log/freeipa-setup.log'
+    cmd = cmd + ' --unattended --debug'
+    cmd = cmd + ' >> /var/log/freeipa-stdout.log'
     
     #ipa-server-install --hostname=sandbox.hortonworks.com --domain=hortonworks.com --realm=HORTONWORKS.COM --ds-password=hortonworks --master-password=hortonworks --admin-password=hortonworks --setup-dns --forwarder=8.8.8.8 --unattended
     Execute(cmd)
@@ -33,11 +33,11 @@ class Master(Script):
     env.set_params(params)
 
   def stop(self, env):
-    Execute('service ipa stop >> /var/log/freeipa-setup.log')
+    Execute('service ipa stop >> /var/log/freeipa-stdout.log')
       
   def start(self, env):
     import params
-    Execute('service ipa start >> /var/log/freeipa-setup.log')
+    Execute('service ipa start >> /var/log/freeipa-stdout.log')
 
   def status(self, env):
     Execute('service ipa status')
